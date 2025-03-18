@@ -20,7 +20,7 @@
                 [ngClass]="{'pi-chevron-down': !isExpanded['equipment'], 'pi-chevron-up': isExpanded['equipment']}"></i>
         </div>
         <ul class="menu-items list-none p-0 m-0 overflow-hidden transition-all" [@slideInOut]="isExpanded['equipment']">
-            <li class="p-2 pl-5 cursor-pointer hover:surface-200">
+            <li class="p-2 pl-5 cursor-pointer hover:surface-200" (click)="navigateTo('equipment')">
                 <i class="pi pi-list mr-2"></i>
                 Equipment List
             </li>

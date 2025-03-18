@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-menu',
   standalone: false,
@@ -13,7 +15,13 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
     ])
   ]
 })
-export class MenuComponent {
+export class MenuComponent implements OnInit {
+  constructor(private router: Router) {}
+
+  ngOnInit() {
+    // Initialize component
+  }
+
   isExpanded: { [key: string]: boolean } = {
     equipment: false,
     supplies: false,
@@ -23,5 +31,9 @@ export class MenuComponent {
 
   toggleSection(section: string) {
     this.isExpanded[section] = !this.isExpanded[section];
+  }
+
+  navigateTo(section: string) {
+    this.router.navigate(['/content', section]);
   }
 }
