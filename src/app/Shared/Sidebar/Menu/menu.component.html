@@ -1,0 +1,154 @@
+<div class="border-bottom-1"> <!-- Home -->
+    <div class="menu-section">
+        <div class="menu-header p-3 cursor-pointer flex justify-content-between align-items-center">
+            <div>
+                <i class="pi pi-home mr-2"></i>
+                Home
+            </div>
+        </div>
+    </div>
+
+    <!-- Equipment Management -->
+    <div class="menu-section">
+        <div class="menu-header p-3 cursor-pointer flex justify-content-between align-items-center"
+            (click)="toggleSection('equipment')">
+            <div>
+                <i class="pi pi-desktop mr-2"></i>
+                Equipment Management
+            </div>
+            <i class="pi"
+                [ngClass]="{'pi-chevron-down': !isExpanded['equipment'], 'pi-chevron-up': isExpanded['equipment']}"></i>
+        </div>
+        <ul class="menu-items list-none p-0 m-0 overflow-hidden transition-all" [@slideInOut]="isExpanded['equipment']">
+            <li class="p-2 pl-5 cursor-pointer hover:surface-200">
+                <i class="pi pi-list mr-2"></i>
+                Equipment List
+            </li>
+            <li class="p-2 pl-5 cursor-pointer hover:surface-200">
+                <i class="pi pi-cog mr-2"></i>
+                Equipment Maintenance
+            </li>
+            <li class="p-2 pl-5 cursor-pointer hover:surface-200">
+                <i class="pi pi-chart-line mr-2"></i>
+                Usage Tracking
+            </li>
+        </ul>
+    </div>
+
+    <!-- Supplies Management -->
+    <div class="menu-section">
+        <div class="menu-header p-3 cursor-pointer flex justify-content-between align-items-center"
+            (click)="toggleSection('supplies')">
+            <div>
+                <i class="pi pi-box mr-2"></i>
+                Supplies Management
+            </div>
+            <i class="pi"
+                [ngClass]="{'pi-chevron-down': !isExpanded['supplies'], 'pi-chevron-up': isExpanded['supplies']}"></i>
+        </div>
+        <ul class="menu-items list-none p-0 m-0 overflow-hidden transition-all" [@slideInOut]="isExpanded['supplies']">
+            <li class="p-2 pl-5 cursor-pointer hover:surface-200">
+                <i class="pi pi-list mr-2"></i>
+                Supplies Inventory
+            </li>
+            <li class="p-2 pl-5 cursor-pointer hover:surface-200">
+                <i class="pi pi-shopping-cart mr-2"></i>
+                Supplies Import/Export
+            </li>
+            <li class="p-2 pl-5 cursor-pointer hover:surface-200">
+                <i class="pi pi-exclamation-triangle mr-2"></i>
+                Inventory Alerts
+            </li>
+        </ul>
+    </div>
+
+    <!-- Personnel Management -->
+    <div class="menu-section">
+        <div class="menu-header p-3 cursor-pointer flex justify-content-between align-items-center"
+            (click)="toggleSection('personnel')">
+            <div>
+                <i class="pi pi-users mr-2"></i>
+                Personnel Management
+            </div>
+            <i class="pi"
+                [ngClass]="{'pi-chevron-down': !isExpanded['personnel'], 'pi-chevron-up': isExpanded['personnel']}"></i>
+        </div>
+        <ul class="menu-items list-none p-0 m-0 overflow-hidden transition-all" [@slideInOut]="isExpanded['personnel']">
+            <li class="p-2 pl-5 cursor-pointer hover:surface-200">
+                <i class="pi pi-user mr-2"></i>
+                Employee List
+            </li>
+            <li class="p-2 pl-5 cursor-pointer hover:surface-200">
+                <i class="pi pi-calendar mr-2"></i>
+                Work Schedule
+            </li>
+            <li class="p-2 pl-5 cursor-pointer hover:surface-200">
+                <i class="pi pi-chart-bar mr-2"></i>
+                Work Reports
+            </li>
+        </ul>
+    </div>
+
+    <!-- Reports & Statistics -->
+    <div class="menu-section">
+        <div class="menu-header p-3 cursor-pointer flex justify-content-between align-items-center"
+            (click)="toggleSection('reports')">
+            <div>
+                <i class="pi pi-file mr-2"></i>
+                Reports & Statistics
+            </div>
+            <i class="pi"
+                [ngClass]="{'pi-chevron-down': !isExpanded['reports'], 'pi-chevron-up': isExpanded['reports']}"></i>
+        </div>
+        <ul class="menu-items list-none p-0 m-0 overflow-hidden transition-all" [@slideInOut]="isExpanded['reports']">
+            <li class="p-2 pl-5 cursor-pointer hover:surface-200">
+                <i class="pi pi-chart-pie mr-2"></i>
+                Usage Statistics
+            </li>
+            <li class="p-2 pl-5 cursor-pointer hover:surface-200">
+                <i class="pi pi-dollar mr-2"></i>
+                Cost Reports
+            </li>
+            <li class="p-2 pl-5 cursor-pointer hover:surface-200">
+                <i class="pi pi-file-pdf mr-2"></i>
+                Export Reports
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="border-top-1">
+    <!-- Info -->
+    <div class="menu-section">
+        <div class="menu-header p-3 cursor-pointer flex justify-content-between align-items-center">
+            <div>
+                <i class="pi pi-info-circle mr-2"></i>
+                About
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="menu-section">
+        <div class="menu-header p-3 cursor-pointer flex justify-content-between align-items-center">
+            <div>
+                <i class="pi pi-phone mr-2"></i>
+                Contact Us
+            </div>
+        </div>
+    </div>
+
+    <!-- Logout -->
+    <div class="menu-section">
+        <div class="menu-header p-3 cursor-pointer flex justify-content-between align-items-center">
+            <div>
+                <i class="pi pi-sign-out mr-2"></i>
+                Logout  
+            </div>
+        </div>
+    </div>
+</div>
+
+
