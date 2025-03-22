@@ -34,6 +34,7 @@ export class MenuComponent implements OnInit {
   }
 
   navigateTo(section: string) {
-    this.router.navigate(['/content', section]);
+    const segments = section.split('/');
+    this.router.navigate(segments);
   }
 }

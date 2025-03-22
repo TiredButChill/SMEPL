@@ -6,7 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {path: '', component: HomeComponent, children: [
-    {path: 'content', loadChildren: () => import('../../Shared/Content/content.module').then(m => m.ContentModule)}
+    {path: '', loadChildren: () => import('../../Shared/Content/content.module').then(m => m.ContentModule)}
   ]},
 ]
 
