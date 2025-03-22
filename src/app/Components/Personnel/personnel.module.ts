@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PersonnelComponent } from '../Personnel/personnel.component';
+import { PersonnelRoutingModule } from './personnel-routing.module';
+
 
 
 
@@ -9,7 +11,8 @@ import { PersonnelComponent } from '../Personnel/personnel.component';
     PersonnelComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    PersonnelRoutingModule
   ],
   exports: [
     PersonnelComponent

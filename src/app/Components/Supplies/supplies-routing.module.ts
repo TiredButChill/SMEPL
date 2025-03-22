@@ -3,7 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { SuppliesComponent } from './supplies.component';
 
 const routes: Routes = [
-  { path: '', component: SuppliesComponent }
+  { path: '', component: SuppliesComponent },
+  { path: 'import/export', component: SuppliesComponent },
+  { path: 'inventory', component: SuppliesComponent },
 ];
 
 @NgModule({

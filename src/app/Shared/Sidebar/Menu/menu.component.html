@@ -1,6 +1,6 @@
 <div class="border-bottom-1"> <!-- Home -->
     <div class="menu-section">
-        <div class="menu-header p-3 cursor-pointer flex justify-content-between align-items-center">
+        <div class="menu-header p-3 cursor-pointer flex justify-content-between align-items-center" (click)="navigateTo('content')">
             <div>
                 <i class="pi pi-home mr-2"></i>
                 Home
@@ -24,11 +24,11 @@
                 <i class="pi pi-list mr-2"></i>
                 Equipment List
             </li>
-            <li class="p-2 pl-5 cursor-pointer hover:surface-200">
+            <li class="p-2 pl-5 cursor-pointer hover:surface-200" (click)="navigateTo('equipment/maintenance')" >
                 <i class="pi pi-cog mr-2"></i>
                 Equipment Maintenance
             </li>
-            <li class="p-2 pl-5 cursor-pointer hover:surface-200">
+            <li class="p-2 pl-5 cursor-pointer hover:surface-200" (click)="navigateTo('equipment/usage')">
                 <i class="pi pi-chart-line mr-2"></i>
                 Usage Tracking
             </li>
@@ -47,15 +47,15 @@
                 [ngClass]="{'pi-chevron-down': !isExpanded['supplies'], 'pi-chevron-up': isExpanded['supplies']}"></i>
         </div>
         <ul class="menu-items list-none p-0 m-0 overflow-hidden transition-all" [@slideInOut]="isExpanded['supplies']">
-            <li class="p-2 pl-5 cursor-pointer hover:surface-200">
+            <li class="p-2 pl-5 cursor-pointer hover:surface-200" (click)="navigateTo('supplies')">
                 <i class="pi pi-list mr-2"></i>
                 Supplies Inventory
             </li>
-            <li class="p-2 pl-5 cursor-pointer hover:surface-200">
+            <li class="p-2 pl-5 cursor-pointer hover:surface-200" (click)="navigateTo('supplies/import/export')">
                 <i class="pi pi-shopping-cart mr-2"></i>
                 Supplies Import/Export
             </li>
-            <li class="p-2 pl-5 cursor-pointer hover:surface-200">
+            <li class="p-2 pl-5 cursor-pointer hover:surface-200" (click)="navigateTo('supplies/inventory')">
                 <i class="pi pi-exclamation-triangle mr-2"></i>
                 Inventory Alerts
             </li>
@@ -74,15 +74,15 @@
                 [ngClass]="{'pi-chevron-down': !isExpanded['personnel'], 'pi-chevron-up': isExpanded['personnel']}"></i>
         </div>
         <ul class="menu-items list-none p-0 m-0 overflow-hidden transition-all" [@slideInOut]="isExpanded['personnel']">
-            <li class="p-2 pl-5 cursor-pointer hover:surface-200">
+            <li class="p-2 pl-5 cursor-pointer hover:surface-200" (click)="navigateTo('personnel')">
                 <i class="pi pi-user mr-2"></i>
                 Employee List
             </li>
-            <li class="p-2 pl-5 cursor-pointer hover:surface-200">
+            <li class="p-2 pl-5 cursor-pointer hover:surface-200" (click)="navigateTo('personnel/maintenance')">
                 <i class="pi pi-calendar mr-2"></i>
                 Work Schedule
             </li>
-            <li class="p-2 pl-5 cursor-pointer hover:surface-200">
+            <li class="p-2 pl-5 cursor-pointer hover:surface-200" (click)="navigateTo('personnel/usage')"   >
                 <i class="pi pi-chart-bar mr-2"></i>
                 Work Reports
             </li>
@@ -101,15 +101,15 @@
                 [ngClass]="{'pi-chevron-down': !isExpanded['reports'], 'pi-chevron-up': isExpanded['reports']}"></i>
         </div>
         <ul class="menu-items list-none p-0 m-0 overflow-hidden transition-all" [@slideInOut]="isExpanded['reports']">
-            <li class="p-2 pl-5 cursor-pointer hover:surface-200">
+            <li class="p-2 pl-5 cursor-pointer hover:surface-200" (click)="navigateTo('reports')">
                 <i class="pi pi-chart-pie mr-2"></i>
                 Usage Statistics
             </li>
-            <li class="p-2 pl-5 cursor-pointer hover:surface-200">
+            <li class="p-2 pl-5 cursor-pointer hover:surface-200" (click)="navigateTo('reports/cost')">
                 <i class="pi pi-dollar mr-2"></i>
                 Cost Reports
             </li>
-            <li class="p-2 pl-5 cursor-pointer hover:surface-200">
+            <li class="p-2 pl-5 cursor-pointer hover:surface-200" (click)="navigateTo('reports/export')">
                 <i class="pi pi-file-pdf mr-2"></i>
                 Export Reports
             </li>
